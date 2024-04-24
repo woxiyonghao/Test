@@ -12,10 +12,10 @@ jobs:
         swift: ["5.0"]
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: swift-actions/setup-swift
+      - uses: swift-actions/setup-swift@65540b95f51493d65f5e59e97dcef9629ddf11bf
         with:
           swift-version: ${{ matrix.swift }}
-      - uses: actions/checkout@v4@65540b95f51493d65f5e59e97dcef9629ddf11bf
+      - uses: actions/checkout@v4
       - name: Build
         run:  |
            xcodebuild clean build -project "11111" -scheme "11111" -destination "platform=iOS Simulator,name=iPhone 12 Pro,OS=latest" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
