@@ -18,9 +18,9 @@ jobs:
       - uses: actions/checkout@v4
       - name: Build
         run:  |
-           xcodebuild clean build -workspace "11111.xcodeproj" -scheme "11111" -destination "platform=iOS Simulator,name=iPhone 12 Pro,OS=latest" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
+           xcodebuild clean build -workspace "project" -scheme "11111" -destination "platform=iOS Simulator,name=iPhone 12 Pro,OS=latest" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
       - name: Test
         run:  |
-           xcodebuild clean test -workspace "11111.xcodeproj" -scheme "11111Tests" -destination "platform=iOS Simulator,name=iPhone 12 Pro,OS=latest" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
+           xcodebuild clean test -workspace "project" -scheme "11111Tests" -destination "platform=iOS Simulator,name=iPhone 12 Pro,OS=latest" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
 
        
