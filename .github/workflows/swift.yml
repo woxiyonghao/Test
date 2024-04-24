@@ -16,6 +16,8 @@ jobs:
         with:
           swift-version: ${{ matrix.swift }}
       - uses: actions/checkout@v4
+      - name: Change directory to project root
+        run: cd /path/to/your/project
       - name: Build
         run:  |
           xcodebuild clean build -project "/Users/lusesi/Desktop/testYml/11111/11111.xcodeproj" -scheme "11111" -destination "platform=iOS Simulator,name=iPhone 12 Pro,OS=latest" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
